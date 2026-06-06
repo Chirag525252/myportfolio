@@ -23,6 +23,8 @@ The portfolio serves as my digital identity, highlighting my technical expertise
 
 * HTML5
 * CSS3
+* apiS
+* python
 
 ### 🎯 Objectives
 
@@ -51,7 +53,7 @@ The portfolio serves as my digital identity, highlighting my technical expertise
 
 * GitHub: https://github.com/chirag525252
 * LinkedIn: https://linkedin.com/in/chiragsharma
-* Email: [your-email@example.com](mailto:chirsgramanujan2024@gmail.com)
+* Email: [your-chiragramanujan2024@gmail.com](mailto:chirsgramanujan2024@gmail.com)
 
 ---
 
