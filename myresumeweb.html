@@ -1,0 +1,1020 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chirag Sharma Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --primary:#5b7cff;
+  --secondary:#8f5cff;
+  --accent:#2dd4bf;
+  --pink:#ff7eb3;
+  --yellow:#ffd166;
+  --bg:#f5f7ff;
+  --surface:rgba(255,255,255,0.8);
+  --text:#1e293b;
+  --muted:#64748b;
+  --border:#e2e8f0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:
+  radial-gradient(circle at top left,#dbeafe 0%,transparent 25%),
+  radial-gradient(circle at bottom right,#fae8ff 0%,transparent 25%),
+  var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(15px);
+  background:rgba(255,255,255,0.7);
+  border-bottom:1px solid rgba(255,255,255,0.4);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 8%;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:28px;
+  font-weight:700;
+  color:var(--primary);
+}
+
+.logo img{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid white;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.logo span{
+  color:var(--secondary);
+}
+
+.logo span{
+  color:var(--secondary);
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:var(--text);
+  font-weight:500;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:var(--primary);
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  padding:80px 8%;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:linear-gradient(135deg,#5b7cff,#7c4dff);
+  border-radius:50%;
+  filter:blur(120px);
+  opacity:.25;
+  top:-120px;
+  right:-100px;
+}
+
+.hero::after{
+  content:'';
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:linear-gradient(135deg,#00c6a7,#2dd4bf);
+  border-radius:50%;
+  filter:blur(120px);
+  opacity:.2;
+  bottom:-100px;
+  left:-100px;
+}
+
+/* FLOATING ICONS */
+
+.float-icon{
+  position:absolute;
+  width:70px;
+  opacity:.18;
+  animation:float 5s ease-in-out infinite;
+}
+
+.icon1{
+  top:18%;
+  left:8%;
+}
+
+.icon2{
+  right:10%;
+  top:25%;
+  animation-delay:1s;
+}
+
+.icon3{
+  bottom:15%;
+  left:40%;
+  animation-delay:2s;
+}
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0px);
+  }
+  50%{
+    transform:translateY(-20px);
+  }
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1000px;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+.hero-left{
+  flex:1;
+}
+
+.badge{
+  display:inline-block;
+  background:rgba(255,255,255,0.5);
+  padding:10px 18px;
+  border-radius:50px;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:25px;
+  backdrop-filter:blur(10px);
+}
+
+.hero h1{
+  font-size:70px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  background:linear-gradient(135deg,#5b7cff,#7c4dff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  color:var(--muted);
+  font-size:18px;
+  margin-bottom:35px;
+  max-width:550px;
+}
+
+/* PROFILE */
+
+.profile-area{
+  position:left;
+}
+
+.profile-ring{
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  padding:6px;
+  background:linear-gradient(135deg,#5b7cff,#ff7eb3,#ffd166,#00c6a7);
+  animation:rotate 8s linear infinite;
+}
+
+@keyframes rotate{
+  100%{
+    transform:rotate(0deg);
+  }
+}
+
+.profile-ring img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid white;
+}
+
+.logo-box{
+  position:absolute;
+  bottom:10px;
+  right:-20px;
+  width:90px;
+  height:90px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(15px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  font-weight:700;
+  color:white;
+  box-shadow:0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* MAIN */
+
+.main{
+  max-width:1200px;
+  margin:auto;
+  padding:50px 8%;
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:30px;
+}
+
+.left,
+.right{
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+}
+
+/* CARDS */
+
+.card{
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,0.4);
+  backdrop-filter:blur(12px);
+  border-radius:25px;
+  padding:30px;
+  box-shadow:0 10px 30px rgba(91,124,255,0.08);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.section-title{
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:25px;
+  color:var(--primary);
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* ENTRY */
+
+.entry{
+  padding-bottom:25px;
+  margin-bottom:25px;
+  border-bottom:1px solid var(--border);
+}
+
+.entry:last-child{
+  border-bottom:none;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+.entry-header{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.entry-title{
+  font-size:18px;
+  font-weight:600;
+}
+
+.entry-date{
+  background:#eef2ff;
+  color:var(--primary);
+  padding:6px 14px;
+  border-radius:50px;
+  font-size:13px;
+  font-weight:600;
+}
+
+.entry-org{
+  margin:8px 0;
+  color:var(--secondary);
+  font-weight:500;
+}
+
+.entry-desc{
+  color:var(--muted);
+  line-height:1.8;
+}
+
+/* PROJECT */
+
+.project-card{
+  background:linear-gradient(135deg,#eef2ff,#fdf2f8);
+  border-radius:20px;
+  padding:25px;
+}
+
+.project-top{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+.project-icon{
+  width:65px;
+  height:65px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#5b7cff,#8f5cff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:28px;
+}
+
+/* SKILLS */
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.skill{
+  background:white;
+  border-radius:14px;
+  padding:12px 16px;
+  font-weight:500;
+  border:1px solid var(--border);
+  transition:.3s;
+}
+
+.skill:hover{
+  background:linear-gradient(135deg,#eef2ff,#fdf2f8);
+  transform:scale(1.03);
+}
+
+/* LANGUAGES */
+
+.lang-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.lang{
+  padding:10px 18px;
+  border-radius:50px;
+  background:#eef2ff;
+  color:var(--primary);
+  font-weight:600;
+}
+
+/* CERTIFICATES */
+
+.award-row{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:18px;
+}
+
+.award-icon{
+  width:50px;
+  height:50px;
+  border-radius:15px;
+  background:linear-gradient(135deg,#5b7cff,#8f5cff);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+}
+
+.certificate-link{
+  text-decoration:none;
+  color:var(--text);
+  font-weight:600;
+  transition:.3s;
+}
+
+.certificate-link:hover{
+  color:var(--primary);
+}
+
+.award-issuer{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+  margin-top:70px;
+  padding:70px 20px;
+  background:linear-gradient(135deg,#5b7cff,#8f5cff,#00c6a7);
+  text-align:center;
+  color:white;
+}
+
+footer h2{
+  font-size:38px;
+  margin-bottom:30px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-bottom:30px;
+}
+
+.footer-btn{
+  text-decoration:none;
+  color:white;
+  background:rgba(255,255,255,0.15);
+  padding:14px 24px;
+  border-radius:50px;
+  backdrop-filter:blur(10px);
+  transition:.3s;
+  font-weight:600;
+}
+
+.footer-btn:hover{
+  background:white;
+  color:var(--primary);
+  transform:translateY(-5px);
+}
+
+.footer-copy{
+  opacity:.9;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .main{
+    grid-template-columns:1fr;
+  }
+
+  .hero-content{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .profile-ring{
+    width:220px;
+    height:220px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+  <div class="logo">
+    <img src="C:\Users\chira\OneDrive\Desktop\MYDOCS\IMG_20250131_163553_073.webp" alt="Chirag Sharma">
+    <div>
+        Chirag <span>Sharma</span>
+    </div>
+</div>
+
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#awards">Awards</a></li>
+  </ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <!-- Floating Images -->
+
+  <img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png" class="float-icon icon1">
+  <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" class="float-icon icon2">
+  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="float-icon icon3">
+  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="float-icon icon4">
+
+  <div class="hero-content">
+
+    <div class="hero-left">
+
+      <div class="badge">
+        🚀 Available for Opportunities
+      </div>
+
+      <h1>
+        Chirag <span>Sharma</span>
+      </h1>
+
+      <p>
+        UI & UX DESIGNER · Educator 
+      </p>
+
+    </div>
+
+    <div class="profile-area">
+
+      <div class="profile-ring">
+        <img src="C:\Users\chira\OneDrive\Desktop\MYDOCS\PROFESSIONAL_PHOTOGRAPH.png">
+      </div>
+
+      <div class="logo-box">
+        CS
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MAIN -->
+
+<section class="main">
+
+  <!-- LEFT -->
+
+  <div class="left">
+
+    <!-- EXPERIENCE -->
+
+    <div class="card" id="experience">
+
+      <div class="section-title">
+        💼 Experience
+      </div>
+
+      <div class="entry">
+
+        <strong>FRESHER</strong>
+
+      </div>
+
+    </div>
+
+    <!-- EDUCATION -->
+
+    <div class="card" id="education">
+
+      <div class="section-title">
+        🎓 Education
+      </div>
+
+      <div class="entry">
+
+        <div class="entry-header">
+
+          <div class="entry-title">
+            Bachelor of Vocation — Software Development
+          </div>
+
+          <div class="entry-date">
+            2023 – Present
+          </div>
+
+        </div>
+
+        <div class="entry-org">
+          Ramanujan College, University of Delhi
+        </div>
+
+        <div class="entry-desc">
+          Pursuing software development with focus on web technologies, programming, and modern software engineering practices.
+        </div>
+
+      </div>
+
+      <div class="entry">
+
+        <div class="entry-header">
+
+          <div class="entry-title">
+            Intermediate (12th Standard)
+          </div>
+
+          <div class="entry-date">
+            2021 – 2023
+          </div>
+
+        </div>
+
+        <div class="entry-org">
+          Radisson The School · UTTARPRADESH
+        </div>
+
+        <div class="entry-desc">
+          Completed schooling with active participation in leadership, academics, and extracurricular activities.
+        </div>
+
+      </div>
+      <div class="entry">
+
+        <div class="entry-header">
+
+          <div class="entry-title">
+            High school (10th Standard)
+          </div>
+
+          <div class="entry-date">
+            2019 – 2021
+          </div>
+
+        </div>
+
+        <div class="entry-org">
+          Radisson The School · UTTARPRADESH
+        </div>
+
+        <div class="entry-desc">
+          Continue schooling with active participation in leadership, academics, and extracurricular activities.
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PROJECTS -->
+
+    <div class="card" id="projects">
+
+      <div class="section-title">
+        🌐 Projects
+      </div>
+        <div class="project-card">
+
+        <div class="project-top">
+
+          <div class="project-icon">
+            🌍
+          </div>
+
+          <div>
+
+            <h3>Sharma industrial gases</h3>
+
+            <p>Ongoing PERSONAL Project</p>
+
+          </div>
+
+        </div>
+
+        <p>
+          A modern industrial gas management and product showcase platform developed to streamline daily data entry, product information, and business operations.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <div class="project-top">
+
+          <div class="project-icon">
+            🌍
+          </div>
+
+          <div>
+
+            <h3>BharatPortals</h3>
+
+            <p>Ongoing Group Project</p>
+
+          </div>
+
+        </div>
+
+        <p>
+          A centralized platform aggregating official Indian government websites, university portals, and public services into one accessible system.
+        </p>
+
+      </div>
+      <div class="project-card">
+
+        <div class="project-top">
+
+          <div class="project-icon">
+            🌍
+          </div>
+
+          <div>
+
+            <h3>Chronohub</h3>
+
+            <p>Completed Personal Project</p>
+
+          </div>
+
+        </div>
+
+        <p>
+          A centralized STOPWATCH SYSTEM aggregating daily life time related problems solution into one accessible system.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+
+  <div class="right">
+
+    <!-- SKILLS -->
+
+    <div class="card" id="skills">
+
+      <div class="section-title">
+        ⚡ Skills
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill">Python</div>
+        <div class="skill">HTML / CSS</div>
+         <div class="skill">Data Entry</div>
+         <div class="skill">Google Sheets</div>
+          <div class="skill">MS Excel </div>
+        <div class="skill">Leadership</div>
+        <div class="skill">Communication</div>
+        <div class="skill">Emotional IQ</div>
+
+      </div>
+
+    </div>
+
+    <!-- LANGUAGES -->
+
+    <div class="card">
+
+      <div class="section-title">
+        🌍 Languages
+      </div>
+
+      <div class="lang-row">
+
+        <div class="lang">Hindi</div>
+        <div class="lang">English</div>
+
+      </div>
+
+    </div>
+
+    <!-- CERTIFICATES -->
+
+    <div class="card" id="awards">
+
+      <div class="section-title">
+        🏆 Certifications & Awards
+      </div>
+
+      <div class="award-row">
+
+        <div class="award-icon">
+          🏅
+        </div>
+
+        <div>
+
+          <a href="certificates/hr-leadership.pdf"
+             target="_blank"
+             class="certificate-link">
+
+             UNLOCKING AI FOR ALL
+
+          </a>
+
+          <div class="award-issuer">
+            MICROSOFT
+          </div>
+
+        </div>
+
+      </div>
+       <div class="award-row">
+
+        <div class="award-icon">
+          🏅
+        </div>
+
+        <div>
+
+          <a href="certificates/hr-leadership.pdf"
+             target="_blank"
+             class="certificate-link">
+
+             HR Leadership Council Connect
+
+          </a>
+
+          <div class="award-issuer">
+            NSDC Certification
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="award-row">
+
+        <div class="award-icon">
+          🛡️
+        </div>
+
+        <div>
+
+          <a href="certificates/cybersecurity.pdf"
+             target="_blank"
+             class="certificate-link">
+
+             Cybersecurity Certification
+
+          </a>
+
+          <div class="award-issuer">
+            Tech Mahindra Foundation
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="award-row">
+
+        <div class="award-icon">
+          ⭐
+        </div>
+
+        <div>
+
+          <a href="#"
+             class="certificate-link">
+
+             Kaushal Mitra
+
+          </a>
+
+          <div class="award-issuer">
+            Skill India Digital Hub
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- NCC -->
+
+    <div class="card">
+
+      <div class="section-title">
+        🪖 NCC Achievements
+      </div>
+
+      <div class="lang-row">
+
+        <div class="lang">
+          🏅 Kartavya Path
+        </div>
+
+        <div class="lang">
+          🏆 Kho-Kho Winner
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <h2>
+    Let's Connect
+  </h2>
+
+  <div class="footer-links">
+
+    <a href="tel:9315778372" class="footer-btn">
+      📞 Call
+    </a>
+
+    <a href="mailto:cs9315778372@gmail.com" class="footer-btn">
+      ✉️ Mail
+    </a>
+
+    <a href="https://linkedin.com/in/CHIRAG SHARMA"
+       target="_blank"
+       class="footer-btn">
+
+       🔗 LinkedIn
+
+    </a>
+
+    <a href="https://github.com/CHIRAG525252"
+       target="_blank"
+       class="footer-btn">
+
+       💻 GitHub
+
+    </a>
+
+    <a href="https://maps.google.com/?q=Faridabad,Haryana"
+       target="_blank"
+       class="footer-btn">
+
+       📍 Location
+
+    </a>
+
+  </div>
+
+  <div class="footer-copy">
+    Designed & Built by Chirag Sharma © 2026
+  </div>
+
+</footer>
+
+</body>
+</html>
+
